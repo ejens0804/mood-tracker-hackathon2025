@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Short page description" />
   <title>Dashboard - Home Page</title>
-  <link rel="stylesheet" href="../static/css/global.css" />
+  <link rel="stylesheet" href="/static/css/global.css" />
 
 </head>
   <body id="home-body">
@@ -14,10 +14,10 @@
         <h1>Mood Ring - Music For Your Mood</h1>
         <nav aria-label="Main navigation">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="current-mood.html">Your Mood</a></li>
-            <li><a href="mood-history.html">Mood History</a></li>
-            <li><a href="tuning.html">Mood Tuning</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/current-mood">Your Mood</a></li>
+            <li><a href="/mood-history">Mood History</a></li>
+            <li><a href="/tuning">Mood Tuning</a></li>
           </ul>
         </nav>
       </div>
@@ -54,5 +54,8 @@
         <p>&copy; <span id="year"></span> Company — All rights reserved</p>
       </div>
     </footer>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    <script/>
   </body>
 </html>
