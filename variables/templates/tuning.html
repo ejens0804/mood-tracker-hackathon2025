@@ -1,40 +1,46 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Short page description" />
-  <title>Dashboard - Home Page</title>
-  <link rel="stylesheet" href="css/global.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Short page description" />
+    <title>Dashboard - Home Page</title>
+    <link rel="stylesheet" href="../static/css/mood-tuning.css" />
+    <script src="../static/js/mood-tuning.js" defer></script>
 
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Mood Ring - Music For Your Mood</h1>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="current-mood.html">Your Mood</a></li>
-          <li><a href="mood-history.html">Mood History</a></li>
-          <li><a href="tuning.html">Mood Tuning</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  </head>
+  <body id="mood-tuning-body">
+    <header>
+      <div class="container">
+        <h1>Mood Ring - Music For Your Mood</h1>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="current-mood.html">Your Mood</a></li>
+            <li><a href="mood-history.html">Mood History</a></li>
+            <li><a href="tuning.html">Mood Tuning</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <main id="content" role="main">
-    <div id="current-mood">
+    <main id="content" role="main">
+      <div id="emotions">
+        <h2>Tell Us How You Are Feeling:</h2>
+        <div id="emotion-grid">
+          <img src="../static/images/calm-logo-transparent.png"/>
+          <img src="../static/images/excited-logo-removebg-preview.png"/>
+          <img src="../static/images/focused-logo-removebg-preview.png"/>
+          <img src="../static/images/stressed-logo-removebg-preview.png"/>
+          <img id="last-image" src="../static/images/tired-logo-removebg-preview.png"/>
+        </div>
+      </div>
+    </main>
 
-    </div>
-    <div id="playlist">
-
-    </div>
-    <div id="sensors">
-
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Company — All rights copyrighted
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> Company — All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
