@@ -1,19 +1,19 @@
 services:
   - type: web
     name: mood-tracker-hackathon2025
-    env: node
-    buildCommand: npm install
-    startCommand: npm start
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
     envVars:
-      - key: NODE_ENV
+      - key: FLASK_ENV
         value: production
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: mood_music.db
       - key: SPOTIFY_CLIENT_ID
         sync: false
       - key: SPOTIFY_CLIENT_SECRET
         sync: false
       - key: SPOTIFY_REDIRECT_URI
-        value: https://your-app-name.onrender.com/callback
-      - key: SECRET_KEY
-        generateValue: true
-      - key: SESSION_SECRET
-        generateValue: true
+        value: https://mood-tracker-hackathon2025.onrender.com/callback
