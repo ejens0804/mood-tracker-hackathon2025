@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment variables (contains secrets!)
+.env
+
+# Database files (contains user data)
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Spotify cache
+.cache
+.cache-*
+.spotify_cache
+
+# Data directories
+data/
+readings/
+config/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

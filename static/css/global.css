@@ -1,0 +1,50 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+header{
+    display: grid;
+    grid-template-rows: 1fr;
+    background-color: rgba(128, 128, 128, 0.3); 
+}
+header h1{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav li{
+    list-style: none;
+    display: inline;
+    padding: 20px;
+}
+nav li a{
+    text-decoration: none;
+    color: black;
+}
+#home-body{
+    background-image: url("home-background.jpg");
+    background-size: cover;        
+    background-repeat: no-repeat;  
+    background-position: center;   
+}
+#about{
+    color: white;
+    word-wrap: normal;
+    width: 60%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    height: 100vh;        
+    text-align: center;     
+    margin: 0 auto;
+    
+}
+footer{
+    display: flex;
+    justify-content: center;
+    color: white;
+}

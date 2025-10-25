@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mood-tracker-hackathon2025
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SPOTIFY_CLIENT_ID
+        sync: false
+      - key: SPOTIFY_CLIENT_SECRET
+        sync: false
+      - key: SPOTIFY_REDIRECT_URI
+        value: https://your-app-name.onrender.com/callback
+      - key: SECRET_KEY
+        generateValue: true
+      - key: SESSION_SECRET
+        generateValue: true
