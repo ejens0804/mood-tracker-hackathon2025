@@ -6,7 +6,7 @@ const PI_URL = "http://172.20.10.2:5000/data"; // Pi endpoint
 
 // Spotify app info
 const CLIENT_ID = "96bf49b1a1154d8bb78a53ce1ee6db45";
-const REDIRECT_URI = "https://mood-tracker-hackathon2025.onrender.com/callback";
+const REDIRECT_URI = "https://yevette-sacrificeable-angeles.ngrok-free.dev";
 const SCOPES = "user-read-playback-state user-modify-playback-state";
 
 // --- Spotify login ---
