@@ -1,40 +1,73 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Short page description" />
-  <title>Dashboard - Home Page</title>
-  <link rel="stylesheet" href="css/global.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Short page description" />
+    <title>Dashboard - Home Page</title>
+    <link rel="stylesheet" href="../static/css/mood-history.css" />
+    <script src="../static/js/mood-history.js" defer></script>
 
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Mood Ring - Music For Your Mood</h1>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="current-mood.html">Your Mood</a></li>
-          <li><a href="mood-history.html">Mood History</a></li>
-          <li><a href="tuning.html">Mood Tuning</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  </head>
+  <body id="mood-history">
+    <header>
+      <div class="container">
+        <h1>Mood Ring - Music For Your Mood</h1>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="current-mood.html">Your Mood</a></li>
+            <li><a href="mood-history.html">Mood History</a></li>
+            <li><a href="tuning.html">Mood Tuning</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <main id="content" role="main">
-    <div id="current-mood">
+    <main id="content" role="main">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Summary</th>
+          </tr>
+        </thead>
+        <tbody>
 
-    </div>
-    <div id="playlist">
+          <!-- Row 1 -->
+          <tr class="collapsible">
+            <td>Oct 24, 2025</td>
+            <td>Calm and balanced</td>
+          </tr>
+          <tr class="details">
+            <td colspan="2">
+              <div class="entry-row"><span>9:30 AM</span><span>Calm</span><span>Sensor</span></div>
+              <div class="entry-row"><span>2:45 PM</span><span>Focused</span><span>User Input</span></div>
+              <div class="entry-row"><span>8:00 PM</span><span>Relaxed</span><span>Sensor</span></div>
+            </td>
+          </tr>
 
-    </div>
-    <div id="sensors">
+          <!-- Row 2 -->
+            <tr class="collapsible">
+              <td>Oct 24, 2025</td>
+              <td>Calm and balanced</td>
+            </tr>
+            <tr class="details">
+              <td colspan="2">
+                <div class="entry-row"><span>9:30 AM</span><span>Calm</span><span>Sensor</span></div>
+                <div class="entry-row"><span>2:45 PM</span><span>Focused</span><span>User Input</span></div>
+                <div class="entry-row"><span>8:00 PM</span><span>Relaxed</span><span>Sensor</span></div>
+              </td>
+            </tr>
 
-    </div>
-  </main>
+        </tbody>
+      </table>
+    </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Company — All rights copyrighted
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> Company — All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

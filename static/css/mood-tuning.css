@@ -1,0 +1,89 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+header{
+    display: grid;
+    grid-template-rows: 1fr;
+    background-color: rgba(128, 128, 128, 0.3); 
+}
+header h1{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav li{
+    list-style: none;
+    display: inline;
+    padding: 20px;
+}
+nav li a{
+    text-decoration: none;
+    color: black;
+}
+#mood-tuning-body{
+    background-color: #0a0a0a;
+    color: black;
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 80%, #0a0a0a 100%),
+    url("../images/mood-tuning-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#content{
+    margin: 2rem;
+}
+#emotions{
+    width: 60%;
+    margin: 0 auto;   
+    text-align: center;  
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 2rem; 
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    overflow: hidden;     
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(1px);        
+    -webkit-backdrop-filter: blur(10px);  
+    border: none;
+    color: black;
+}
+#emotion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem; 
+    justify-items: center; 
+    align-items: center;
+    height: auto;
+    padding-bottom: 2rem;
+}
+#emotion-grid img {
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    overflow: hidden;     
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(1px);        
+    -webkit-backdrop-filter: blur(10px);  
+    border: none;
+    color: black;
+}
+#last-image{
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
