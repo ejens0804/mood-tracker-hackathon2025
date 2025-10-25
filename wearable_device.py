@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 # Configuration
-SERVER_URL = "http://localhost:5000"  # Change to your Render URL when deployed
+SERVER_URL = "https://mood-tracker-hackathon2025.onrender.com"  # Change to your Render URL when deployed
 DEVICE_ID = "wearable_001"
 SEND_INTERVAL = 30  # seconds
 

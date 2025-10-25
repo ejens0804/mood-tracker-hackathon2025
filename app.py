@@ -21,32 +21,32 @@ class Reading(db.Model):
     __tablename__ = 'readings'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     temperature = db.Column(db.Float, nullable=False)
-    timestamp = db.Column(db.String, nullable=False)
-    device_id = db.Column(db.String)
+    timestamp = db.Column(db.String(50), nullable=False)
+    device_id = db.Column(db.String(100))
     raw_data = db.Column(db.Text)
 
 class Threshold(db.Model):
     __tablename__ = 'thresholds'
-    mood = db.Column(db.String, primary_key=True)
+    mood = db.Column(db.String(50), primary_key=True)
     min_temp = db.Column(db.Float, nullable=False)
     max_temp = db.Column(db.Float, nullable=False)
-    updated_at = db.Column(db.String)
+    updated_at = db.Column(db.String(50))
 
 class TuningLog(db.Model):
     __tablename__ = 'tuning_log'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    timestamp = db.Column(db.String, nullable=False)
+    timestamp = db.Column(db.String(50), nullable=False)
     temperature = db.Column(db.Float, nullable=False)
-    reported_mood = db.Column(db.String, nullable=False)
+    reported_mood = db.Column(db.String(50), nullable=False)
     min_temp = db.Column(db.Float)
     max_temp = db.Column(db.Float)
 
 class MoodLog(db.Model):
     __tablename__ = 'mood_log'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    timestamp = db.Column(db.String, nullable=False)
+    timestamp = db.Column(db.String(50), nullable=False)
     temperature = db.Column(db.Float, nullable=False)
-    detected_mood = db.Column(db.String, nullable=False)
+    detected_mood = db.Column(db.String(50), nullable=False)
     playlist_played = db.Column(db.Integer)
 
 DEFAULT_THRESHOLDS = {
@@ -93,6 +93,14 @@ def save_user_thresholds(mood, min_temp, max_temp):
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/current-mood')
+def current_mood():
+    return render_template('current-mood.html')
+
+@app.route('/mood-history')
+def mood_history():
+    return render_template('mood-history.html')
 
 @app.route('/tuning')
 def tuning():
