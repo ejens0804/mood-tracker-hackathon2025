@@ -7,6 +7,7 @@
     <title>Dashboard - Home Page</title>
     <link rel="stylesheet" href="../static/css/mood-tuning.css" />
     <script src="../static/js/mood-tuning.js" defer></script>
+    <script src="../static/js/backend.js" defer></script>
 
   </head>
   <body id="mood-tuning-body">
@@ -34,6 +35,16 @@
           <img src="../static/images/stressed-logo-removebg-preview.png"/>
           <img id="last-image" src="../static/images/tired-logo-removebg-preview.png"/>
         </div>
+      </div>
+      <div class="playlist-inputs">
+        <label for="relaxed">Relaxed Playlist URI:</label>
+        <input id="relaxed" type="text" placeholder="spotify:playlist:RELAXED_URI">
+
+        <label for="neutral">Neutral Playlist URI:</label>
+        <input id="neutral" type="text" placeholder="spotify:playlist:NEUTRAL_URI">
+
+        <label for="energetic">Energetic Playlist URI:</label>
+        <input id="energetic" type="text" placeholder="spotify:playlist:ENERGETIC_URI">
       </div>
     </main>
 
