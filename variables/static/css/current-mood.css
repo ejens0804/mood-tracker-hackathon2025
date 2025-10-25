@@ -29,7 +29,15 @@ nav li a{
     background-size: cover;        
     background-repeat: no-repeat;  
     background-position: center;   
+}
+#content{
     color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#current-mood{
+    display: inline;
+    justify-content: center;
 }
 footer{
     display: flex;
