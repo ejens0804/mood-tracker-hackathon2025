@@ -6,14 +6,9 @@ const PI_URL = "http://172.20.10.2:5000/data"; // Pi endpoint
 
 // Spotify app info
 const CLIENT_ID = "96bf49b1a1154d8bb78a53ce1ee6db45";
-const REDIRECT_URI = "https://yevette-sacrificeable-angeles.ngrok-free.dev";
+const REDIRECT_URI = "https://yevette-sacrificeable-angeles.ngrok-free.dev/callback";
 const SCOPES = "user-read-playback-state user-modify-playback-state";
 
-// --- Spotify login ---
-function redirectToSpotifyLogin() {
-    const authUrl = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=token&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&scope=${encodeURIComponent(SCOPES)}`;
-    window.location.href = authUrl;
-}
 
 // --- Get token ---
 function getSpotifyToken() {
