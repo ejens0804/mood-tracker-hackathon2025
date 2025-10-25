@@ -1,5 +1,8 @@
 Flask==3.0.0
+Flask-SQLAlchemy==3.0.3
+pymysql==1.1.0
+Flask-Migrate==4.0.4
 gunicorn==21.2.0
-spotipy==2.23.0
 requests==2.31.0
 python-dotenv==1.0.0
+spotipy==2.23.0
