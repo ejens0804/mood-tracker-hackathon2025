@@ -15,12 +15,6 @@ class TemperatureWearable:
         self.api_endpoint = f"{server_url}/api/temperature"
     
     def read_temperature(self):
-        """
-        Read temperature from sensor
-        Replace this with your actual sensor reading code
-        """
-        
-        # OPTION 1: DS18B20 Temperature Sensor (Raspberry Pi)
         try:
             import glob
             base_dir = '/sys/bus/w1/devices/'
@@ -38,30 +32,6 @@ class TemperatureWearable:
                     return temp_c
         except Exception as e:
             print(f"DS18B20 error: {e}")
-        
-        # OPTION 2: DHT22 Sensor (Raspberry Pi)
-        # Uncomment and install: pip install adafruit-circuitpython-dht
-        # import board
-        # import adafruit_dht
-        # try:
-        #     dht_device = adafruit_dht.DHT22(board.D4)
-        #     temperature = dht_device.temperature
-        #     return temperature
-        # except RuntimeError as e:
-        #     print(f"DHT22 error: {e}")
-        
-        # OPTION 3: BME280 Sensor (Raspberry Pi)
-        # Uncomment and install: pip install adafruit-circuitpython-bme280
-        # import board
-        # import adafruit_bme280
-        # try:
-        #     i2c = board.I2C()
-        #     bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
-        #     return bme280.temperature
-        # except Exception as e:
-        #     print(f"BME280 error: {e}")
-        
-        # OPTION 4: Simulated data for testing
         import random
         # Simulate body temperature between 36.0 and 38.0 °C
         return round(random.uniform(36.0, 38.0), 2)

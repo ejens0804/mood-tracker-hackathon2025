@@ -11,11 +11,11 @@ def calculate_mood(temp, accel):
         return 'energetic'
 
 while True:
-    data = requests.get("http://172.20.10.2:5000/data").json()
+    data = requests.get("http://172.0.0.1:4040").json()
     
     # calculate mood from sensor data
     mood = calculate_mood(data['temperature'], data['acceleration'])
     
     print("Mood:", mood)
     
-    time.sleep(2)  # repeat every 2 seconds
+    time.sleep(5)

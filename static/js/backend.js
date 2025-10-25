@@ -6,19 +6,14 @@ const PI_URL = "http://172.20.10.2:5000/data"; // Pi endpoint
 
 // Spotify app info
 const CLIENT_ID = "96bf49b1a1154d8bb78a53ce1ee6db45";
-const REDIRECT_URI = "https://yevette-sacrificeable-angeles.ngrok-free.dev";
+const REDIRECT_URI = "https://yevette-sacrificeable-angeles.ngrok-free.dev/callback";
 const SCOPES = "user-read-playback-state user-modify-playback-state";
 
-// --- Spotify login ---
-function redirectToSpotifyLogin() {
-    const authUrl = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=token&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&scope=${encodeURIComponent(SCOPES)}`;
-    window.location.href = authUrl;
-}
 
 // --- Get token ---
 function getSpotifyToken() {
     // If we are on the callback page, extract token from URL hash
-    if (window.location.pathname === '/callback' || window.location.pathname.endsWith('callback.html')) {
+    if (window.location.pathname.endsWith('.dev')) {
         const hash = window.location.hash.substring(1);
         const params = new URLSearchParams(hash);
         const token = params.get('access_token');
