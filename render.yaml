@@ -10,7 +10,6 @@ services:
       - key: FLASK_SECRET_KEY
         generateValue: true
       - key: DATABASE_URL
-        value: mood_music.db
       - key: SPOTIFY_CLIENT_ID
         sync: false
       - key: SPOTIFY_CLIENT_SECRET
