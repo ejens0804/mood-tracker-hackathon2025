@@ -18,4 +18,4 @@ while True:
     
     print("Mood:", mood)
     
-    time.sleep(2)  # repeat every 2 seconds
+    time.sleep(5)

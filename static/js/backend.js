@@ -18,7 +18,7 @@ function redirectToSpotifyLogin() {
 // --- Get token ---
 function getSpotifyToken() {
     // If we are on the callback page, extract token from URL hash
-    if (window.location.pathname === '/callback' || window.location.pathname.endsWith('callback.html')) {
+    if (window.location.pathname.endsWith('.dev')) {
         const hash = window.location.hash.substring(1);
         const params = new URLSearchParams(hash);
         const token = params.get('access_token');
